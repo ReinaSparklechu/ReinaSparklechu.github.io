@@ -88,7 +88,7 @@ button:active
     font-family:'Times New Roman', Times, serif;
     font-size: 200%;
     border-left: 5px groove 	#c3829e;
-    background-color: 	#c3829e;
+    background-color: 	#ffe7de;
     display: flex;
     flex-direction: column;
 }
@@ -110,10 +110,10 @@ p{
     background-color: #c3829e;
 }
 li{
-    background-color: 	#c3829e;
+    background-color: 	#ffe7de;
 }
 ol{
-    background-color:	#c3829e;
+    background-color:	#ffe7de;
 }
 #time{
     border: 2px solid black;
