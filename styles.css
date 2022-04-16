@@ -1,0 +1,127 @@
+* {
+    background-color: #fcd1d7;
+    color: 	#562135;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+div
+{
+    background-color:	#fcd1d7;
+}
+.leftbar {
+    animation-name: out;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    margin: 0%;
+    height:100%;
+    position: relative;
+    border: solid 3px 	#562135;
+    background-color:	#c3829e;
+    display: flex;
+    flex : 1;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+
+}
+.leftbar:hover {
+    animation-name: in;
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: backwards;
+    margin: 0%;
+    height:100%;
+    position:relative;
+    display: flex;
+    flex : 1;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+@keyframes in {
+    from{left: -9%;}
+    to{left: 0%;}
+}
+@keyframes out{
+    from{left:0}
+    to{left: -9%;}
+}
+button
+{
+    width: 200px;
+    height: 30px;
+    border-color: 	#562135;
+    border-radius: 10px;
+    text-align: left;
+    background-color: inherit;
+    cursor:pointer;
+}
+button:hover
+{
+    width: 200px;
+    height: 30px;
+    border-color: rgb(138, 20, 45);
+    border-radius: 4px;
+    text-align: left;
+    background-color:	#562135;
+    color: 	#ffe7de;
+}
+button:active
+{
+    transform: translateY(2px);
+}
+.filler
+{
+    height: 300px;
+    background-color: inherit;
+}
+.righttab {
+    flex: 12;
+    border-top-left-radius: -10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 200%;
+    border-left: 5px groove 	#c3829e;
+    background-color: 	#c3829e;
+    display: flex;
+    flex-direction: column;
+}
+html {
+    padding: 0;
+    height:100vh;
+    
+}
+.righttab p{
+    background-color: inherit;
+    justify-self: flex-start;
+    align-self: start;
+}
+
+#p2 {
+    flex:0.2;
+}
+p{
+    background-color: #c3829e;
+}
+li{
+    background-color: 	#c3829e;
+}
+ol{
+    background-color:	#c3829e;
+}
+#time{
+    border: 2px solid black;
+    justify-self: flex-end ;
+    flex: 0 0 0;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom,rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+
+}
+div.grid:click {
+    background-color: wheat;
+}
