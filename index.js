@@ -1,5 +1,4 @@
-var { initializeApp } = require('firebase/app');
-var{ getFirestore, collection, getDocs } = require ('firebase/firestore/lite');
+
 //const functions = require('firebase-functions');
 
 
@@ -21,4 +20,10 @@ async function getList(db) {
     listSnap = await getDocs(list);
     const listed = listSnap.docs.map(doc => console.log(doc.data()));
 }
- getList(db);
+getList(db);
+
+async function displayPosts(e)
+{
+  selectedDate = e.target.textContent()
+  selectedMonth = 
+}
