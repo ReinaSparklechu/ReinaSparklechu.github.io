@@ -86,7 +86,7 @@ button:active
     flex: 12;
     border-top-left-radius: -10px;
     font-family:'Times New Roman', Times, serif;
-    font-size: 200%;
+    font-size: 4vh;
     border-left: 5px groove 	#c3829e;
     background-color: 	#ffe7de;
     display: flex;
@@ -149,6 +149,8 @@ div.grid:click {
     overflow: scroll;
 }
 .Messages {
-    min-height: 15vh;
-    border: 5px dotted #562135;
+    min-height: 10vh;
+    font-size: 2.5vh;
+    border: 5px dashed #562135;
+    
 }

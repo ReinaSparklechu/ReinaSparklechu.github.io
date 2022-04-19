@@ -107,14 +107,20 @@ async function displayPosts(e)
   let selectedMonth = currentMonth.getMonth().toString();
   let selectedYear = currentMonth.getFullYear().toString();
   const rightTab = document.getElementById('messageBoard');
-  for(let i = 0; i<5; i++)
+  rightTab.innerHTML= ' ';
+  for(let i = 0; i<10; i++)
   {
         let query = `Reddit/Reddit-${selectedDate}-${selectedMonth}-${selectedYear}-${i.toString()}`;
         let ref = doc(db, query);
         let docSnap = await getDoc(ref);
         const newPost = document.createElement('div');
+        // get some way to convert subreddit links to actual links.
+        newPost.style.cursor = 'pointer'
+        newPost.style.margin = '1vh';
+        newPost.style.borderRadius = '1vh'
         newPost.setAttribute('class', 'Messages')
-        newPost.textContent = docSnap.data().header;
+        newPost.textContent = `Title: ${docSnap.data().header}`;
+        newPost.setAttribute('href', docSnap.data().links);
         rightTab.appendChild(newPost);
         
   }
