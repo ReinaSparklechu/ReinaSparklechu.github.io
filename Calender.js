@@ -106,13 +106,17 @@ async function displayPosts(e)
   let selectedDate = e.target.textContent;
   let selectedMonth = currentMonth.getMonth().toString();
   let selectedYear = currentMonth.getFullYear().toString();
-  let queryIndex = 0;
-  let query = `Reddit/Reddit-${selectedDate}-${selectedMonth}-${selectedYear}-${queryIndex.toString()}`;
+  const rightTab = document.getElementById('messageBoard');
   for(let i = 0; i<5; i++)
   {
+        let query = `Reddit/Reddit-${selectedDate}-${selectedMonth}-${selectedYear}-${i.toString()}`;
         let ref = doc(db, query);
         let docSnap = await getDoc(ref);
-        console.log(docSnap.data());
+        const newPost = document.createElement('div');
+        newPost.setAttribute('class', 'Messages')
+        newPost.textContent = docSnap.data().header;
+        rightTab.appendChild(newPost);
+        
   }
 
 }
