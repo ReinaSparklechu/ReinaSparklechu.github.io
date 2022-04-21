@@ -120,7 +120,20 @@ async function displayPosts(e)
         newPost.style.borderRadius = '1vh'
         newPost.setAttribute('class', 'Messages')
         newPost.textContent = `Title: ${docSnap.data().header}`;
-        newPost.setAttribute('href', docSnap.data().links);
+
+        // get the link
+        let link = docSnap.data().links;
+        let reg = RegExp('/r/');
+        if(link.match(reg))
+        {
+            //append front of link for subreddit links
+            let completelink = "http://reddit.com";
+            completelink = completelink.concat(link);
+            newPost.setAttribute('onclick', `window.location.href='${completelink}'`);
+        }
+        else{
+            newPost.setAttribute('onclick', `window.location.href='${link}'`);
+        }
         rightTab.appendChild(newPost);
         
   }
